@@ -21,7 +21,7 @@ TEST(main, crash) {
 };
     // char buf[10] = "a";
     // char params[2] = "1153";
-    ASSERT_EQ(1, labb(1, argv));
+    ASSERT_EQ(0, labb(1, argv));
 }
  
 int main(int argc, char **argv) {
