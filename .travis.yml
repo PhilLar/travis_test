@@ -3,7 +3,7 @@ sudo: false
 language: c
 compiler:
   - gcc
-  - clang
+  # - clang
 os:
   - linux
 
@@ -13,14 +13,14 @@ addons:
     - ubuntu-toolchain-r-test
     packages:
     - gcc-4.8
-    - g++-4.8
-    - clang
+    # - g++-4.8
+    # - clang
 
 # before install:
 #   - if [[ "$TRAVIS_OS_NAME" == "osx" ]]; then brew update          ; fi
 # install:
 #   - if [ "$CXX" = "g++" ]; then export CXX="g++-4.8" CC="gcc-4.8"; fi
 script:
-  - gcc ex.c main.c -lm
+  - gcc main.c -lm
   - cmake CMakeLists.txt && make
   - ./runTests
